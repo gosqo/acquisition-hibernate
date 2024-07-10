@@ -1,8 +1,9 @@
-package org.flyinheron.hibernate;
+package org.flyinheron.hibernate.global;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
-@org.springframework.stereotype.Controller
+@Controller
 public class ViewController {
     @GetMapping("")
     public String welcome() {

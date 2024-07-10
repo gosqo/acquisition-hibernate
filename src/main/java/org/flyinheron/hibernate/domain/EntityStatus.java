@@ -1,4 +1,4 @@
-package org.flyinheron.hibernate;
+package org.flyinheron.hibernate.domain;
 
 public enum EntityStatus {
     ACTIVE

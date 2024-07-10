@@ -1,4 +1,4 @@
-package org.flyinheron.hibernate;
+package org.flyinheron.hibernate.domain;
 
 import jakarta.persistence.EntityManager;
 import lombok.extern.slf4j.Slf4j;
@@ -47,11 +47,14 @@ public class MemberTest {
                 .phoneNumber("01201230123")
                 .build();
 
+        // persist(entity), 영속성 컨텍스트(1차 캐시)에 entity 저장 및 쓰기 지연 SQL 저장소에 DB 에 보낼 쿼리문을 저장.
         entityManager.persist(member);
         entityManager.persist(member2);
 
+        // flush(), 영속성 컨텍스트의 쓰기 지연 SQL 저장소에 쌓인 쿼리를 보내고, 영속성 컨텍스트의 1차 캐시와 DB에 삽입된 엔터티의 싱크를 맞춘다(???).
+        // flush() 명시하지 않으면, org.hibernate.engine.transaction.internal.TransactionImpl.commit() 시 flush().
         entityManager.flush();
-//        entityManager.refresh(member);
+        entityManager.refresh(member);
 
         String memberId = member.getId();
         LocalDateTime createdDate = member.getCreatedDate();

@@ -1,4 +1,4 @@
-package org.flyinheron.hibernate;
+package org.flyinheron.hibernate.domain;
 
 import jakarta.persistence.*;
 import lombok.Builder;
@@ -10,7 +10,7 @@ import lombok.ToString;
 @Builder
 @ToString
 @Table(name = "member")
-public class Member extends BaseEntity {
+public class Member extends EntityBase {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;

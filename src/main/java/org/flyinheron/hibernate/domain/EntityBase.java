@@ -1,4 +1,4 @@
-package org.flyinheron.hibernate;
+package org.flyinheron.hibernate.domain;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 @Getter
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
-public abstract class BaseEntity {
+public abstract class EntityBase {
     @Enumerated(value = EnumType.STRING)
     private EntityStatus status;
 

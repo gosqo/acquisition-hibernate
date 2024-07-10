@@ -1,4 +1,4 @@
-package org.flyinheron.hibernate;
+package org.flyinheron.hibernate.domain;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
@@ -27,7 +27,7 @@ public class MemberService {
                 .build();
 
         entityManager.persist(embededMember);
-
+        entityManager.flush();
         log.info("persisted.");
     }
 }
