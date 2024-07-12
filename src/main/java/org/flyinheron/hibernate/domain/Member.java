@@ -1,15 +1,17 @@
 package org.flyinheron.hibernate.domain;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
-import lombok.ToString;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Getter
 @Builder
-@ToString
 @Table(name = "member")
+@NoArgsConstructor
+@AllArgsConstructor
 public class Member extends EntityBase {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
