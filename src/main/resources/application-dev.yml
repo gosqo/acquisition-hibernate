@@ -9,3 +9,11 @@ spring:
   mvc:
     view:
       suffix: .html
+
+logging:
+  level:
+    root: debug
+    web: debug
+    org.hibernate.SQL: debug
+    org.hibernate.type: trace
+    org.springframework.web: debug

@@ -1,3 +1,55 @@
 spring:
   datasource:
     url: jdbc:h2:mem:test;MODE=MYSQL
+
+#  sql:
+#    init:
+      #   SQL script based initialization 에 사용할 플랫폼(h2, mysql, postgresql ...)
+      #   프로필 개념(-test)으로 사용하기도?, {schema, data}-${platform}.sql.
+#      platform: test
+
+  jpa:
+    show-sql: false
+    # hibernate database initialize 이후 {schema,data}.sql 사용 시 주석 해제.
+    # JPA Hibernate initialize, SQL script initialization 혼합을 권장하지는 않지만, 필요시 사용.
+    #    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: create-drop # embedded database 사용 시 기본값.
+
+logging:
+  level:
+    root: debug
+    web: debug
+    org.hibernate.SQL: info
+    org.hibernate.HQL_FUNCTIONS: info
+
+    org.hibernate.jdbc: info
+
+    org.hibernate.orm: debug
+    org.hibernate.orm.idgen.factory: info
+    org.hibernate.orm.query.sqm.ast: info
+    org.hibernate.orm.sql.ast.create: info
+    org.hibernate.orm.sql.ast.tree: info
+    org.hibernate.orm.results.graph.AST: info
+    org.hibernate.orm.model.mapping.creation: info
+
+    org.hibernate.jpa.event.internal.CallbackDefinitionResolverLegacyImpl: info
+
+    org.hibernate.persister.entity.AbstractEntityPersister: info
+
+    org.hibernate.internal: debug
+
+    org.hibernate.boot.model.internal: info
+    org.hibernate.boot.internal.InFlightMetadataCollectorImpl: info
+
+    org.hibernate.query.sqm.function.SqmFunctionRegistry: info
+    org.hibernate.mapping: info
+
+    org.hibernate.type: trace
+    org.hibernate.type.descriptor.sql: trace
+    org.hibernate.type.BasicTypeRegistry: info
+    org.hibernate.type.descriptor.jdbc.spi.JdbcTypeRegistry: info
+
+    org.springframework.web: debug
+    org.springframework.beans.factory.support.DefaultListableBeanFactory: info
+    org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger: info

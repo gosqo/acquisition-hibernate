@@ -12,15 +12,6 @@ spring:
   jpa:
     show-sql: false
     open-in-view: false
-    ddl-auto: create
     properties:
       hibernate:
         format_sql: true
-
-logging:
-  level:
-    web: debug
-    org.hibernate.SQL: debug
-    org.hibernate.type: trace
-    org.springframework.web: debug
-
