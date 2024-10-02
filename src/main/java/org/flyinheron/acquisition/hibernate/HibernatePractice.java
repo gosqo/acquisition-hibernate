@@ -1,6 +1,6 @@
-package org.flyinheron.hibernate;
+package org.flyinheron.acquisition.hibernate;
 
-import org.flyinheron.hibernate.domain.MemberService;
+import org.flyinheron.acquisition.hibernate.domain.MemberService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;

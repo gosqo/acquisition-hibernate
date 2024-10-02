@@ -1,4 +1,4 @@
-package org.flyinheron.hibernate.global;
+package org.flyinheron.acquisition.hibernate.global;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,9 +9,4 @@ public class ViewController {
     public String welcome() {
         return "welcome";
     }
-
-//    @GetMapping("error")
-//    public String error() {
-//        return "error";
-//    }
 }

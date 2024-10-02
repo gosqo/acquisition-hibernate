@@ -1,0 +1,2 @@
+INSERT INTO member (id, created_date, email, password, nickname, phone_number) VALUES ('some-generated-uuid-for-sure', NOW(), 'flyin.heron@gmail.com', 'someLegitPassword', 'heron', '01133338888');
+-- 테스트에 사용되는 데이터 미리 삽입하기 위한 스크립트.

@@ -1,4 +1,4 @@
-package org.flyinheron.hibernate.domain;
+package org.flyinheron.acquisition.hibernate.domain;
 
 import jakarta.persistence.EntityManagerFactory;
 import lombok.extern.slf4j.Slf4j;
